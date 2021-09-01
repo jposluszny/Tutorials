@@ -4,6 +4,7 @@
 
 body{
   font-family: sans-serif;
+  margin:0;
 }
 
 #logolink{
@@ -15,7 +16,30 @@ header > hr{
   width: 80%;
 }
 
-/* Menu główne */
+.container{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.bnt{
+  background-color: var(--kolorGlowny);
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  display: block;
+  max-width: fit-content;
+  border: 1px solid black;
+}
+
+.bnt:hover{
+  background-color: white;
+  color: var(--kolorGlowny);
+}
+
+/* ---------Menu główne--------- */
 .topnav{
   text-align: center;
 }
@@ -28,6 +52,7 @@ header > hr{
   font-size: 1.2rem;
   text-transform: uppercase;
 }
+
 .topnav a:hover{
   background-color: var(--kolorGlowny);
   color:white;
@@ -36,8 +61,36 @@ header > hr{
 .topnav .mobMenuIcon{
   display: none;
 }
+/* ---------/Menu główne--------- */
+/* ---------Banner--------- */
+.banner{
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url(images/tlo.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+}
+
+.container h1{
+  font-size: 4rem;
+  color: white;
+  font-weight: 800;
+}
+
+.container h3{
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+
+/* ---------/Banner--------- */
 
 @media only screen and (max-width:600px){
+  /* ---------Menu główne--------- */
   .topnav{
     text-align: left;
   }
@@ -69,5 +122,16 @@ header > hr{
   header > hr{
     display: none;
   }
+  /* ---------/Menu główne--------- */
+
+  /* ---------Banner--------- */
+
+  .banner .container h1{
+    font-size: 10vw;
+  }
+
+  .banner .container h1{
+    font-size: 7vw;
+  }
+  /* ---------/Banner--------- */
 }
-/* Menu główne */
