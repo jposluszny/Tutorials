@@ -1,5 +1,6 @@
 :root{
   --kolorGlowny:rgb(255, 0, 0);
+  --kolorTla:rgb(155, 155 , 155);
 }
 
 body{
@@ -17,7 +18,6 @@ header > hr{
 }
 
 .container{
-  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 1rem;
@@ -62,6 +62,8 @@ header > hr{
   display: none;
 }
 /* ---------/Menu główne--------- */
+
+
 /* ---------Banner--------- */
 .banner{
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url(images/tlo.jpg);
@@ -85,9 +87,32 @@ header > hr{
   font-weight: 600;
   margin-bottom: 2rem;
 }
-
-
 /* ---------/Banner--------- */
+
+/* ---------Main--------- */
+main{
+  background-color: var(--kolorTla);
+}
+
+main .container{
+  display: flex;
+  padding: 0;
+}
+
+.mainItem{
+  margin:1rem 0.5rem;
+  padding: 1rem;
+  background-color: white;
+}
+
+main .container #mainColumn{
+  flex: 70vw;
+}
+
+main .container #mainAside{
+flex: 30vw;
+}
+/* ---------/Main--------- */
 
 @media only screen and (max-width:600px){
   /* ---------Menu główne--------- */
@@ -125,7 +150,6 @@ header > hr{
   /* ---------/Menu główne--------- */
 
   /* ---------Banner--------- */
-
   .banner .container h1{
     font-size: 10vw;
   }
@@ -134,4 +158,20 @@ header > hr{
     font-size: 7vw;
   }
   /* ---------/Banner--------- */
+
+  /* ---------Main--------- */
+  main .container{
+    flex-direction: column;
+  }
+
+  main .container #mainColumn{
+    flex: auto;
+  }
+
+  main .container #mainAside{
+  flex: auto;
+  }
+
+  /* ---------/Main--------- */
+
 }
